@@ -1,0 +1,35 @@
+// Process Management CPU Scheduling//
+
+
+
+Notes:
+	Process Control Block:	The data structure used by the os to manage information about a process.
+
+	Context switch:	The exchange of register information that occurs when one process is removed from
+		the CPU and another takes its place.
+
+	CPU Scheduling:	is the act of determining which process in the ready state should be moved to the 
+		running state.
+	
+		Nonpreemptive scheduling CPU scheduling that occurs when the Currently Executing process
+			gives up the CPU vountarily.
+
+		Preemtive scheduling:	CPU scheduling that occurs when the os decides to favor another
+			process, preemptive the currently executing process.
+
+		Turnaround time:	The CPU scheduling metric that measures the elaspes time between
+			a process's  arrival in the  ready state and its ulimate completion.
+
+		(SJN) Shortest Job Next:	dispatches the job with the smallest service time. The 
+			SJN algorithm is provably optimal (we could know the service time of ea. job.)
+				
+			Like (FCFS)FirstComeFirstServe, it is also generally implemented as a nonpreemptive
+				algorithm.
+
+			
+		Round Robin:	Round Robin CPU scheduling distributes the processing time equitably among
+			all ready processes. The algorithm establishes a particular time slice(or quantum),
+				which is the amount of time each process recieves before being preemptive
+				 and returned to the ready state to allow another process its turn.
+		
+					
