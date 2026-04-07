@@ -1,0 +1,32 @@
+// Looping_Notes & Subprogram-statements//
+
+
+
+Loops:
+	Count-controlled loops=repeat a specified no of times, uses a loop-control variable with some value.
+
+		Event-controlled loops= the no of repetitions is controlled by an event that occurs within the bdy
+			of the loop itself.
+
+
+Subprogram-statements:
+			We can give a section of code a name and use that name as a statement in another part of the program.
+				When the name part is encountered the processing in the other part halts, while the named  code 
+					is executed.
+
+			There are two basic forms of subprograms one is just a named code that does a task, the other does a task
+				but also returns a single value to the calling unit.
+			The first is used as a calling statement and the second is used as an expression in the calling unit where
+				the returned value is then used in the evaluation of the expression(in some languages these could be called
+				subroutines, or functions, or prcedures and functions, C++ calls the first void function and the second value-returning function,
+				java calls both methods, all are perfect for abstraction.)
+
+Parameter passing:			
+			There are times when the calling unit needs to give information to the subprogram to use in it's processing. The method of communication used
+				in high-level languages is called a parameter list(which is a list of the identifiers with which the subprogram is to work, along with 
+				the types of each identifier placed in parentheses beside the subprogram name., The Identifiers ARE CALLED parameters).  <-------NOTE
+				The subprogram is defined before it is called, it doesn't know which identifier in the list it is to work, so the ARE CALLED arguments
+				(and part of the parameters) 
+IMPORANT--------->>		which are variables of the subprogram that is asking the parameter list(identifier list(which are arguments(which are actually variables)))
+				Consequently any arguement passed by the calling unit to a reference parameter can be changed by the subprogram, because the subprogram is 
+				manipulating the actual variable not a copy.
