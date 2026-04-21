@@ -154,5 +154,116 @@ Limitations of computing:
 												Good software:	2 errors per 1000 lines of source code
 												Space Shuttle software:	< 1 error per 10000 lines of source code (KSLOC errors per source lines of code)
 												The goal of this research is to establish a method for proving programs that is analogous to the method for correctness mathamatically, theorectically,
-												and  statistically. 
+												and  statistically.
+
+				Problems:
+						
+							Comparing Algorithms:
+										1. Execution Time (Latency)
+										//		long startTime = System.nanoTime();	//
+										//		// run algorithm			//
+										//		long endTime = System.nanoTime();	//
+										//		long duration = endTime - startTime;	//
+
+										2. Memory Usage
+										//		Runtime runtime = Runtime.getRuntime(runtime.gc());			//
+										//		long usedMemoryBefore = runtime.totalMemory() - runtime.freeMemory();	//
+										//		// run algorithm							//
+										//		runtime.gc();								//
+										//		long usedMemoryAfter = runtime.totalMemory() - runtime.freeMemory();	//
+										//		long memoryUsed = usedMemoryAfter - usedMemoryBefore; // in bytes	//
+
+										3. Accuracy
+										//		// Example: Accuracy			
+										//		int correct = 0;						//
+										//		for (int i = 0; i < trueLabels.length; i++) {			//
+										//		if (predictedLabels[i] == trueLabels[i]) {			//
+										//		correct++;							//
+										//			}							//
+										//		}								//
+										//		double accuracy = (double) correct / trueLabels.length;		//
+
+										4. throughput
+										//		long startTime = System.nanoTime();				//
+										//		// run algorithm						//
+										//		long endTime = System.nanoTime();				//
+										//		double seconds = (endTime - startTime) / 1e9;			//
+										//		double throughput = numberOfOperations / seconds;		//
+
+										5. Convergence or Stability Metrics
+										//		// Pseudocode	<----don't really need this line from gpg
+										//		while (difference > threshold && iterations < maxIterations) {	//
+										//		// perform iteration						//
+										//		difference = Math.abs(newValue - oldValue);			//
+										//		iterations++;							//
+										//		}								//
 							
+										6. defining a int for Objective measures			
+										//		public interface AlgorithmMeasure {				//
+										//		double measure(AlgorithmResult result);				//
+										//		}								//
+						
+										The reason for this is to compare two algorithms that do the same task, and understand
+										the complexity of algorithms, forms a continuum from easy to unsolvable
+										Execution times are specific to a particular computer.
+										For a list of 100 elements, there are 99 addition operations, however we do not count
+										the number of addition operations; it is some function of the elements  (N) in the list, 
+										therefore, we can express the number of addition operations in terms of N: for a list
+										of N elements, there are N-1 addition operations.
+							Big-O Analysis:	
+									Common Big-O Notations:
+												O(1) - Constant Time Complexity
+												O(log n) - Lagarithmic Time Complexity
+												O(n) - Linear Time Complexity
+												O(n log n) - Linearithmic Time Complexity
+												O(n^2) - Quadratic Time Complexity
+												O(2^n) - Exponential Time Complexity
+												O(n!) - Factorial Time Complexity
+												
+										//		public class Example {						//		
+										//			public static void main(String[] args) {		//
+										//				int[] array = new int[1000];			//
+										//				for (int i = 0; i < array.length; i++) {	//
+										//					for (int j = 0; j < array.length; j++) {	//
+										//						array[j] = array[j] + 1;	//
+										//						}				//
+										//					}					//
+										//				}						//
+										//			}							//	
+										
+										Example time complexity in java called BigOTest
+										//		public class BigOTest {								//
+										//			public static void main(String[] args) {				//
+										//				int[] inputSizes = {100, 1000, 10_000, 100_000, 1_000_000};	//
+										//												//
+										//				for (int size : inputSizes) {					//
+										//					long startTime = System.nanoTime();			//
+										//												//
+										//				// Call the method you want to test				//
+										//				testMethod(size);						//
+										//												//
+										//				long endTime = System.nanoTime();				//
+										//				long duration = endTime - startTime;				//
+										//												//
+										//				System.out.printIn("Input size: " + size + " - Time:		//
+										//					}							//
+										//				}								//
+										//												//
+										//				// Example method: nested loops(0(n^2))				//
+										//				public static void testMethod(int size) {			//
+										//					int[] array = new int[size];				//
+										//												//
+										//					for (int i = 0; i < array.length; i++) {		//
+										//						for (int j = 0; j < array.length; j++) {	//
+										//							array[j] = array[j] + 1;		//
+										//								}				//
+										//							}					//
+										//						}						//
+										//					}							//
+										Output:
+										//				Input size:	100 - Time: 12345 ns
+										//				Input size:	1000 - Time: 678901 ns
+										//				Input size:	10000 - Time 7890123 ns
+										//				Input size:	100000 - Time: 89012345 ns
+										// 				Input size:	1000000 - Time: 901234567 ns
+										
