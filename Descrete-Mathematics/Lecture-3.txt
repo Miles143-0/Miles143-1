@@ -1,0 +1,281 @@
+// Lecture 3 //
+
+
+The 12-Fold way of Combinatorics
+
+We consider 12 different versions, How many ways can we place x pieces of candy into b bags?
+The answer depends on whether the bags are distinguishable or identical, and whether the bags 
+can hold any number of objects, can hold at most 1 object, or must have at least 1 object.
+
+1. 
+A. How many ways can x pieces of candy be distributed among b bags.
+B. The answer will depend on 3 factors: Are the candies distinguishable?
+	can the bags have any number of candies, can they have at most 1 
+	candy, or must they have at least 1 candy?
+D. The answers will be entered into a table, called the 12-fold way table.
+
+Candies(x)	Bags(b)		Unrestricted	≤1			≥1
+
+D		D		(D,D,U)		(D,D, <)		(D,D, >)
+I		D		(I,D,U)		(I,D, <)		(I,D, >)
+D		I		(D,I,U)		(D,I, <)		(D,I, >)
+I		I		(D,I,U)		(I,I, <)		(I,I, >)
+
+Notice that if x > b, then there are 0 ways to redistribute candy into bags so that
+each bag gets at most 1 candy., When b > x, there are 0 allocations where each bag
+gets at least 1 candy?
+
+Denotes:
+D=Distinguishable, U=Unrestricted, I=Indistinguishable, < (for at most one candy per bag), > (for at least one candy per bag)
+
+Ex:
+	(D, I, >) denotes the situation where the candies are distinguishable, the bags are identical, and each bag requires at 
+			least 1 candy. Assuming x is at least as large as b.
+
+Ex:
+	x=4 candies, b=2 bags
+
+	1. {A}, {B,C,D}
+	2. {B}, {A,C,D}
+	3. {C}, {A,B,D}
+	4. {D}, {A,B,C}
+	5. {A,B}, {C,D}
+	6. {A,C}, {B,D}
+	7. {A,D}, {B,C}
+			S(4,2)=7, S=stirling numbers, S(x,b) the # of ways to split x distinct objects into b non-empty, unlabeled groups
+
+// Ex:
+	Miles143-0
+			total characters=10
+			combinatorics interpretation=10
+	Letters=5
+	Digits=4
+	Symbol=1 so, 5+4+1=10
+	all characters are distinct(no repeats)
+	
+	combinatorics terms:
+			Objects=characters=10 distinct items,
+			now lets distribute items into groups,
+			we can apply Stirling numbers and permutations.
+
+	How many ways to reorder the string?
+//
+	10!=10⋅9⋅8⋅7⋅6⋅5⋅4⋅3⋅2⋅1 
+	since all 10 characters are distinct, the number of different arrangements(permutations is:
+	
+		10×9=90
+		90×8=720
+		720×7=5040
+		5040×6=30240
+		30240×5=151200
+		151200×4=604800
+		604800×3=1814400
+		1814400×2=3628800
+		3628800×1=3628800 so, 10!=3628800,
+					so 3628800 different arraangements of Miles143-0,
+										143Miles-0
+										-0Miles143
+										s3M-14e0li																				//
+
+	Valid Partitions:
+	
+	Partition A {M,i,l,e,s} | {1,4,3,-,0}
+	Partition B {M,1,4} | {i,l,e,s,3,-,0}
+	Partition C {M} | {i,l,e,s,1,4,3,-,0}
+	Partition D {M,i,-,0} | {l,e,s,1,4,3}
+						every distinct clustering counts once.
+
+	What does not create a new partition:
+						{M,i,l,e,s} | {1,4,3,-,0}
+						these unlabeled groups are 
+						exactly the same as:
+									{1,4,3,-,0} | {M,i,l,e,s}
+						Also,
+							{M,i,l}={l,M,i}, 
+							because order inside a set doesnt matter.
+
+	Distribute characters into 2 identical groups
+	S(10,2)=number of ways to split 10 distinct objects into 2 non-empty unlabeled groups
+
+	Miles143
+	&
+	143Miles <----order matters in permutations, factorials, and bijections.
+
+	{M,i,l} and {e,s,1,4,3}
+	
+	internal orders do not matter, group labels do not matter,
+	so,
+		
+		{M,i,l}, {e,s,1,4,3}
+		is the same partition as,
+		{e,s,1,4,3}, {M, i, l} <----- no longer a permutation problem, but a set partition problem.
+
+				Stirling Number of the Second Kind:
+								10 distinct objects→into 2 nonempty unlabeled groups is,
+						
+								S(n,2) using the formula S(n,2) = 2ⁿˉ¹-1
+								Since n=10:
+
+								S(10,2)=2
+								S(10,2) = 2⁹-1
+								=512-1
+								=511 different ways to split the characters of Miles143-0(counted by stirling numbers)
+
+					The big difference from Permutations: 
+										Permutations Miles143-0,
+												Mile0s143- different order different arrangement
+														(counted by factorials)
+
+					12-fold Table:
+							using Miles143-0 n=10 objects, k boxes/groups
+									we categorize as 3x4 table
+
+							Row 1: Dinstinct objects:
+										{M,i,l,e,s,1,4,3,-,0}
+
+										Each character chooses any box:
+														k¹⁰
+														1st object k choices,
+														2nd object k 1 choices,
+														3rd object k 2 choices,..10th object k 9 choices.
+														
+														so,
+															k(k-1)(k-2)...(k-9)
+										Dinstinct boxes, injective
+													at most one character per box:
+																	k!/(k-10)! same as 10!/0! = 10!
+										
+										Lets say we have 10 characters and each is unique we can repersent this as 10!(ten factorial)
+										
+										so if in a 12-fold way of combinatorics table each position has a unique value then,
+										L=letter, D=digit, S=symbol,
+
+									then	1,	2,	3,	4,	5,	6,	7,	8,	9,	10
+										
+										L	L	L	L	L	D	D	D	S	D	
+
+
+										10!/5!4!1!=10 characters/5 Letters, 4 Digits, 1 Symbols equals 1260 TYPE layouts.
+										10!/5!4!1! <----known as mulitnomial coefficient
+
+										1260·26⁵·10⁴·32	
+										1260 possible layouts x 26 alphabetically choices(5 letters) x 10 choices of digits(1-10)^4 digits x 32 possilbe symbols.
+
+										1260:
+
+										26⁵= 26, 26, 26, 26, 26 can write this as 
+															ƒL: {1,2,3,4,5}→{a,...,z}<----the most important formula in all combinatorics
+
+										Case A:	Repition Allowed
+													first slot gets M only, 25 remain(then 24, 23, 22,..) 26!/21!(this is a permutation) <----ask why 21 not 20 or 19
+
+
+										Case B: Repition Forbidden
+													Miles
+													26!=26·25·24·23·22(the choices)
+																so, 26!/21!(twenty-one remaining choices)
+			Stirling Numbers of the second kind/is Bell Numbers:
+
+							Bell Number Definition:
+										Bn​=nΣk=1​S(n,k), see ex-4
+								
+								Stirling numbers gives the shape of the grouping,
+								while the factorial gives the naming of the groups.
+								Think of stirling numbers as layers. In these our
+								examples k=groups.
+								
+								n=10, Miles143-0 S(10, k)
+
+								Ex: Partitions {{M,i,l,e,s},{1,4,3,-,0},
+										{{M}, {iles143-0}},
+										{{M,1,-}, {i,l,e,s,4,3,0}}
+
+										k			S(10, k)
+
+										1			1
+										2			511
+										3			9330
+										4			34105
+										5			42525
+										6			22827
+										7			5880
+										8			750
+										9			45
+										10			1
+
+								Ex-2:
+									Assignment 1:	A->{M,i,l}
+											B->{e,s,1}
+											C->{4,3,-,0}
+			
+									Assignment 2:	A->{e,s,1}
+											B->{4,3,-,0}
+											C->{M,i,l}
+
+									Assignment 3:	A->{4,3,-,0}
+											B->{M,i,l}
+											C->{e,s,1}
+
+											How many labelings:		3!=6(permutations ex: A,B,C)
+											Create partition:		S(10,3),
+											Assign labels to groups:	3!
+															3!S(10,3)=6·9930=
+											Final count:					55980
+
+									Ex-3:
+										Another way to look at it:
+														S(n,k),
+															so thats k!,
+															Lets assign characters
+															to boxes A,B,C
+															
+															Each character has 3 choices: 3¹⁰
+
+															surjections count only nonempty:
+																			A nonempty
+																			B nonempty
+																			C nonempty
+	
+																			3!S(10,3)
+
+															exactly the number of onto functions ʄ:{M,i,l,e,s,1,4,3,−,0}→{A,B,C}
+																				ʄ:characters -> boxes
+									Ex-4:
+										summation notation,
+										n=10
+										B¹⁰=10Σk=1S(10,k)
+										expanding:
+												B¹⁰=S(10,1)+S(10,2)+S(10,3)+S(10,4)+S(10,5)+S(10,6)+S(10,7)+S(10,8)+S(10+9)+S(10,10)
+										
+										subtle values:	   =1+511+9330+34105+42525+22827+5880+750+45+1
+
+										thus,		 B¹⁰=115975
+
+									Ex-5
+										integer partition(sizes of groups):
+												Set partitions(who is grouped with who?)
+												Integer partitions(how big are the groups?)
+																	{M,i,l,e}, {s,1,4}, {3,-,0}
+																					4+3+3
+																					n=10,
+																						so,
+																							p(10)
+									
+									NOTES:
+										Permutations 10!
+										Multinomial layouts 10!/5!4!1!
+										Repetition allowed 25⁵
+										Injective selection 26!/21!
+										All allocations k¹⁰
+										Injective allocations k!/(k-10)!
+										Onto allocations k!S(10,k)
+										Unlabled partitions S(10,k)
+										All partitions B¹⁰
+		
+
+Notes:
+	Stirling Number of the Second Kind=S(n,k)=k!1​i=0∑k​(−1)i(ik​)(k−i)n
+	Different order different Arrangement.
+	Every distinct clustering counts once. 
+	Permutations study: ordering
+	12-fold way of Combinatorics notes: recursive structure, bell numbers												//
