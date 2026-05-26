@@ -1,0 +1,29 @@
+// Lecture 4 JOM //
+
+
+
+The Joy of Counting:
+			if one event can happen in m ways and another in n ways, then together they can happen in, 
+			m+n.
+
+			so lets arrange some letters and see how many ways they can be arranged,
+												AB, BA 2!=2
+
+												ABC, ACB, BAC, BCA, CAB, CBA 3!=6
+
+												A=ABCD, ABDC, ACBD, ACDB, ADBC, ADCB
+												B=BACD, BADC, BCAD, BCDA, BDAC, BDCA
+												C=CABD, CADB, CBAD, CBDA, CDAB, CDBA
+												D=DABC, DACB, DBAC, DBCA, DCAB, DCBA
+																	4!=24
+
+			The branch of Mathematics called Combinatorics, allows us to solve problems in different ways.
+
+			Next lets say we talk about the California Lottery namely, Super Lotto Plus, first choose 5 finonacci
+			numbers, from 1-47, next, choose a meganumber from 1 through 27.
+
+			so step 1: 2,3,5,8,13 meag number:21 how many ways can the state pick its numbers, and which of those are the
+			numbers we picked.
+
+	 		So basically the number of ways to pick k objects from n objects when the order is not important is, n!/k!·(n-k)!,
+			the notation for this is (n,k).
