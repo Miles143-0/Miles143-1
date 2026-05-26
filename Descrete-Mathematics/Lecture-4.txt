@@ -1,0 +1,63 @@
+// Lecture 4 //
+Blaise Pascal: discovered the Pascal's triangle in 1654
+
+
+Mathematics is the science of patterns. Perhaps nothing in mathematics contains more beautiful patterns than Pascal's
+triangle. The entries of Pascal's triangle are the binomial coefficient, specifically , the 𝑘 entry of row 𝑛 is the 
+counting number (𝑛𝑘). 
+
+Pascals Triangle and the Binomial Treorium:
+					
+					Pascals Complete Triangle,
+					
+						                        
+						  1
+              					1   1
+            				      1   2   1
+          				    1   3   3   1
+					  1   4   6   4   1
+					1   5  10  10   5   1
+				     1   6   15   20   15   6   1	the sum of two numbers diagnally above it,
+									Pascals Triangle is symmetric, n≥0
+
+					
+					ok now,
+						each row means
+								0	(a+b)⁰
+								1	(a+b)¹
+								2	(a+b)²
+								3	(a+b)³
+
+						row two is 121 which gives (a+b)²=a²+2ab+b², so a=8.0, b=4.0
+										look at this like a square,
+										a and b repersenting on the side,
+										while ab are repersenting on the top,
+										and when these variables come together is,..
+											  a	  b
+										      a  a²	  ab
+										      b	 ab	  b²
+
+						The Binomial Theorium connects 
+						the triangle with alegbra,
+						combinatorial proof of why in 
+						Pascal’s Triangle are binomial coefficients:	(n, k) so, (n-1, k-1)+(n-1, k)
+							we are trying to prove the number of ways to choose k objects from n objects 
+							equals the sum of:	ways that include a particular element, ways that exclude that element
+						Pascals Triangle sigma notation:	(a+b)^n=^n∑k=0(nk​)a^n−k b^k
+
+
+						Small pascal triangle Patterns and Proofs using (10,2):
+											10	2
+											    12
+											probability equals 10/12≈83.3%, 2/12≈16.7%
+											10+2=12, 10:2=5:1 so (10,2)=5:1
+
+						Pascal counts→divide by total→probability
+
+NOTES:
+reasons pascals triangle is useful and powerful:	Powers of 2 (row totals)
+							Binomial expansions like (a+b)n
+							Combinatorics (ways to choose things)
+							Patterns like Fibonacci diagonals
+
+Formula for Binomial Coefficient=n/r = n!/r!(n-r)!
