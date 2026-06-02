@@ -1,0 +1,92 @@
+// Lecture 6 //
+
+
+
+		The Principal of Inclusion-Exclusion:
+							PIE: the principal of inclusion-exclusion, 
+								Inclusion = add the groups,
+								Exclusion = subtract the parts counted more than once.,
+			
+								Lets say we have two groups:
+												
+												A={1,2,3,4,5}
+												B={4,5,6,7}, so A=5, B=4
+
+												Lets count the numbers, we find that we count 4 twice,
+												and 5 twice, so, we subtract the overlap,
+												|A|+|B|=5+4=9,<-----original math,
+												|A|+|B|-|A ∩ B|,<-----subtracting the overlap,
+															which becomes,
+																5+4-2=7,
+																which is, {1,2,3,4,5,6,7}<-----distinct elements,
+																
+																Lets look at the symbols:
+																			|A|=number of things in A
+																			|B|=number of things in B
+																			A ∩ B=things that are in both A and B
+																			|A|+|B|=number of things in both,
+
+																so the rule is: |A∪B|=|A|+|B|−|A∩B|<-----where A∪B means everything in A or B.
+
+							Ex:
+								Step 1 Universe:	Miles143-0 we take the set U={1,2,3,4,5,6,7,8,9,0}, so |U|=10,
+
+								Step 2: Define Miles143-0 sets:	M(Miles)=contains 1 digit
+												A(143)=contains digits 1,4,3
+												Z(-0)=contains digit 0,
+								Step 3: What are we finding:
+												so, M={1}, A={1,3,4}, Z={0},
+												|M∪A∪Z|<-----how many distinct digits appear in at least one of these sets,
+								Step 4: List elements only:
+												M={1}, A={1,3,4}, Z={0} so, M∪A∪Z={0,1,3,4}
+								Step 5: Apply inclusion and exclusion:
+												|M|=1, |A|=3, |Z|=1, 1+3+1=5
+
+											Intersections:
+													M∩A={1}→1, M∩Z=∅→0, A∩Z=∅→0, 
+											Triple intersection:
+													M∩A∩Z=∅→0
+								Step 6: Inclusion–Exclusion formula:						
+													|M∪A∪Z|=5−1−0−0+0=4
+								Final Answer=	|M∪A∪Z|=4 4 distinct elements
+
+									NOTES: If a set have no elements in common, then // A∩B={} //, the empty set is donoted as ɸ.
+
+								
+							Next, Imagine our universe is S={1,2,3,4,5,6,7,8,9,0}
+
+									
+								Step 1: Define our sets
+								A₁={1,2,3}->|A₁|=3
+								A₂={3,4,5}->|A₂|=3
+								A₃={5,6}->|A₃|=2
+								A₄={7,8}->|A₄|=2
+								A₅={0,1,9}->|A₅|=3
+
+								Step 1: S₁​=∣A₁​∣+∣A₂​∣+∣A₃∣+∣A₄​∣+∣A₅∣=3+3+2+2+3=13
+								
+								Step 2: List pairwise intersections
+													1. A₁∩A₂={3}⇒|A₁∩2|=1 
+													2. A₁∩A₃=∅⇒0 
+													3. A₁∩A₄=∅⇒0 
+													4. A₁∩A₅={1}⇒1 
+													5. A₂∩A₃={5}⇒1 
+													6. A₂∩A₄=∅⇒0 
+													7. A₂∩A₅=∅⇒0 
+													8. A₃∩A₄=∅⇒0 
+													9. A₃∩A₅=∅⇒0 
+													10. A₄∩A₅=∅⇒0
+															sum of pairwise intersections: S₂=1+0+0+1+1+0+0+0+0+0=3
+									Step 3: Triple intersections
+													1.A₁∩A₂∩A₃=∅⇒0
+													2. A₁∩A₂∩A₄=∅⇒0 
+													3. A₁∩A₂∩A₅=∅⇒0,... S₃=∅⇒0 all triple intersections are empty
+
+									Step 4: 4-way and 5-way intersections
+													4-way: all empty → S₄=∅⇒0
+													5-way: all empty → S₅=∅⇒0
+
+									Step 5: Apply inclusion-exclusion formula
+													|A₁∪A₂∪A₃∪A₄∪A₅|=S₁−S₂+S₃−S₄+S₅=13−3+0−0+0=10
+
+									Final answer=|A₁∪A₂∪A₃∪A₄∪A₅|=10
