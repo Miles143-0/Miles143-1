@@ -1,0 +1,137 @@
+// Lecture 7 //
+
+
+
+
+Proofs--Inductive, Geometric, Combinatorial:
+						Mathematics is the science of patterns, for example what do you get when you sum the first n numbers. 
+						or the first n odd numbers, or the first n numbers in a row or column or diagonal of Pascal's triangle?
+						IHOP: Induction Hypothesis
+
+						
+						I. adding first numbers:
+						Lets start with triangular numbers:
+											    1=1
+											   1+2=3
+											  1+2+3=6
+											 1+2+3+4=10
+											1+2+3+4+5=15,
+													the answers are 1,3,6,10,15,..,
+													these are called triangular numbers becuase you 
+													could arrange the dots into a triangle, .
+																		..
+																		...
+													ex:
+														6 dots make a triangle with 3 rows,
+														suppose you want: 1+2+3+4+5,
+														pair the first and last =(1+5)=6,
+																		(2+4)=6,
+														plus the middle number 3: 6+6+3=15,
+														this leads to n(n+1)/2, for now: adding first n numbers
+																	gives a triangular number.
+
+						I. proofs by induction:
+											    1=1
+											   1+3=4
+											  1+3+5=9
+											 1+3+5+7=16
+											1+3+5+7+9=25,
+													the answers are 1,4,9,16,26,..,
+													aka: 1²,2²,3²,4²,5²,.. or squares.
+													the sum of first n number is n²,
+													first 3 odd numbers -> 3²=9, 
+													first 5 odd numbers -> 5²=25
+													first 10 odd numbers -> 10²=100,
+						The most important pattern in descrete mathematics is:
+													       	      1
+      														    1   1
+    														  1   2   1
+  														1   3   3   1
+													      1   4   6   4   1,
+																every numbers comes from adding two numbers above it.
+																the answers are: 1,2,4,8,16,..,
+																so 2⁰,2¹,2²,2³,2⁴,
+																the sum of row n in Pascals Triangle=2n,
+
+						now lets use induction to prove that the sum of the first n numbers is n(n+1)/2,
+						Base case: n=1, 1=(1)(2)/(2),
+						IHOP: Assume this is true for k: 1+2+..+k=k(k+1)/2, 
+						1+2+⋯+k+(k+1),
+						which equals (k+1)/(k/2+1)/2=(k+1)(k+2)/2
+
+						II. the fibonacci numbers are 0,1,1,2,3,5,8,13,21,34,55,... .
+							They are defined by the initial conditions 𝐹₀=0,𝐹₁=1, and the rule 𝐹𝑛=𝐹𝑛˗₁+𝐹𝑛˗₂
+
+							𝑛=1,
+							Step 1: LHS(Left-hand side): 𝐹₁=1,
+								RHS(Right-hand side): 𝐹₂=1,
+								LHS=RHS, so the base case holds.
+							Step 2:	assume that for some n=k,
+									𝐹₁-𝐹₃+𝐹₅-...+(-1)ᵏ⁺¹ 𝐹₂ₖ-1=𝐹₂ₖ,
+								we want to prove it for n=k+1,
+									𝐹₁-𝐹₃+𝐹₅-...+(-1)ᵏ⁺² 𝐹₂(ₖ+1)-1=𝐹₂ₖ,
+							Step 3:	Induction step,
+								start with LHS for n=k+1,
+										LHSₖ₊1=𝐹₁-𝐹₃+...+(-1)ᵏ⁺¹𝐹₂ₖ-1+(-1) ᵏ⁺²𝐹₂ₖ+1.
+										LHSₖ₊1=𝐹₂ₖ+(-1)ᵏ⁺² 𝐹₂ₖ+1.
+							Step 4: Simplify the sign:
+								(-1)ᵏ⁺²=(-1)ᵏ⋅(-1)²=(-1)ᵏ.
+								so,	LHSₖ₊1=𝐹₂ₖ+(-1)ᵏ𝐹₂ₖ+1.
+							Step 5: Use Fibonacci recurrence
+								𝐹₂ₖ+(-1)ᵏ 𝐹₂ₖ+1=𝐹₂ₖ+2,
+								check parity patterns of Fibonacci numbers,
+								𝐹₂ₖ+2=𝐹₂ₖ+1+𝐹₂ₖ<-----if k is even (-1)ᵏ=1, then 𝐹₂ₖ=𝐹₂ₖ+1=𝐹₂ₖ+2,
+										   if k is odd (-1)ᵏ=-1, then 𝐹₂ₖ=𝐹₂ₖ+1=?
+
+								Ex:
+									our fibonacci numbers are,
+										0,1,1,2,3,5,8,13,21,34,55,…
+									Step 1: 𝐹₀=0, 
+										𝐹₁=1,
+									rule,	𝐹𝑛=𝐹𝑛˗₁+𝐹𝑛˗, so 𝑛=10,
+													𝐹₀=0,𝐹₁=1,𝐹₂=1,𝐹₃=2,𝐹₄=3, 𝐹₅=5,𝐹₆=8,𝐹₇=13,𝐹₈=21,𝐹₉=34,𝐹₁₀=55,
+													n= 0,   1,   2,  3,   4,    5,   6,    7,    8,    9,    10
+									proof by induction:
+											𝐹₁+𝐹₂+...+𝐹𝑛=𝐹𝑛+₂-1,
+									Base case: n=1,
+											LHS: 𝐹₁=1,
+											RHS: 𝐹₃-1=2-1=1,	
+													𝐹₁=𝐹₃-1,
+									IHOP: assume some for k: 
+												𝐹₁+𝐹₂+...+𝐹ₖ=𝐹ₖ+₂-1,
+									Induction step:
+									we must prove that, 𝐹₁+𝐹₂+...+𝐹ₖ=𝐹ₖ+₃-1, 
+										start with LHS: 𝐹₁+𝐹₂+...+𝐹ₖ=𝐹ₖ₁,
+										group the first k terms together: (𝐹₁+𝐹₂+...+𝐹ₖ)+𝐹ₖ+₁
+										apply the induction hypothesis, 𝐹₁+𝐹₂+...+𝐹ₖ=𝐹ₖ+₂-1,
+											replace parenthesized part, (𝐹ₖ+₂-1)+𝐹ₖ+₁,
+											now we have: 𝐹ₖ+₂+𝐹ₖ+₁-1
+									Step 5: use fibonacci recurrence
+													𝐹𝑛=𝐹𝑛-₁+₃,
+										if n=k+3, then 𝐹ₖ+₃=𝐹ₖ+₂+𝐹ₖ+₁,
+										so replace, 𝐹ₖ+₂+𝐹ₖ+₁, with 𝐹ₖ+₃,
+										and showed it equals, 𝐹ₖ+₃-1, so 𝐹₁+...+𝐹ₖ+₁=𝐹ₖ+₃-1,
+									Conclusion: so proof that n≥1 is true.
+
+									// This would be written as:
+													const n = 10;
+
+													const triangular = n => n*(n+1)/2;
+													const sumOdd = n => n**2;
+													const pascalSum = n => 2**n;
+													const fib = n => {
+  														let a = 0, b = 1;
+  														for (let i = 0; i < n; i++) [a, b] = [b, a + b];
+  														return a;
+														};
+													const sumFib = n => fib(n+2) - 1;
+
+													console.log(
+  													`n=${n}:`,
+  													`Triangular=${triangular(n)},`,
+  													`SumOdd=${sumOdd(n)},`,
+  													`PascalSum=${pascalSum(n)},`,
+  													`SumFib=${sumFib(n)}`
+													);
+
+													console.log(`Pascal entry (n,2) = ${n},2`);	//
