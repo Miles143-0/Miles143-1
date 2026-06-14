@@ -1,0 +1,116 @@
+// Lecture 8 //
+
+
+//
+Linear Reccurances and Fibonacci Numbers:
+					Imagine rabbits, Month 1: 1 pair of rabbits, Month 2: still 1 pair, After that, every 
+					mature pair produces a new pair each month. 1,1,2,3,5,8,13,.. notice 1+2=3, 2+3=5, 3+5=8,...
+					𝐹₁+𝐹₂+...+𝐹ₖ <----these are called recurrences, say we need to know what the 1000th fibonacci 
+					number is, well we are obvisouly not going to count that, 
+												so 𝐹𝑛=rⁿ, 
+												the fibonacci rule is,
+															𝐹𝑛=𝐹-₁+𝐹-₂,
+												replace every F by r, 
+															rⁿ=rⁿ-₁+rⁿ-₂, 
+												now simplify, 
+												every term contains 
+															rⁿˉ²,
+												now divide everything by it, 
+															r²=r+1,
+												move everything to one side,
+															r²-r-1=0,
+												this is the characteristic equation,
+															r²-r-1=0,
+												now solve the equation,
+												there are two solutions,
+												1.			r₁=1+√5/2≈ 1.618,
+												2.			r₂=1-√5/2≈ 0.618,
+												there are two eqponential patterns
+												hidden inside the fibonacci sequence,
+																	(above 1 and 2),
+												the most general solution is,
+																𝐹𝑛=A(r₁)ⁿ+B(r₂)ⁿ,
+												where A and B are constants,
+												think of this like mixing two ingredients,
+												Ingredient 1: (1.618)ⁿ,
+												Ingredient 2: (-0.618)ⁿ,
+												we use the starting values 𝐹₀=0, 𝐹₁=1,
+												plug them in and lets solve for A and B,
+																	A=1/√5 and B=-(1/√5)<----only in parenthesis because the whole equation is negative.
+												Solution then gives,
+															𝐹𝑛=⏀ⁿ-ψⁿ√5,
+												where,
+													⏀=1.618...,
+												and
+													ψ=-0.618... this is Binet's formula.
+												look at
+													(-0.618)ⁿ,
+												as n gets larger
+														(−0.618)²=0.382,
+														(-0.618)⁵=-0.090
+														(-0.618)¹°=0.008,
+												it gets tiny, very tiny,
+												eventually it's almost zero.
+												so for large n,
+														𝐹𝑛≈(1.618)ⁿ/√5,
+												this means,
+														Fibonacci numbers grow,
+														almost exactly like powers of 1.618,
+														thats why the golden ration appears
+														everywhere in Fibonacci theory.
+												**above is a refresher but what we actually need to
+												  understand is a𝑛​=a𝑛-₁+a𝑛-₂,
+												  1. guess a𝑛=rⁿ,
+												  2. substitute into the recurrence,
+												  3. get a polynomial equation in r,
+												  4. solve for the roots,
+												  5. build the general solution from those roots,
+												  6. use initial conditions to determine the constants.
+
+												  A recurrence relation turns a sequence problem into
+												  an algebra problem by pretending the sequence behaves
+												  like powers of a number, and solving for which powers
+												  actually work.
+
+												Ex:
+																						rule,	𝐹𝑛=𝐹𝑛˗₁+𝐹𝑛˗₂, so 𝑛=10,
+													𝐹₀=0,𝐹₁=1,𝐹₂=1,𝐹₃=2,𝐹₄=3, 𝐹₅=5,𝐹₆=8,𝐹₇=13,𝐹₈=21,𝐹₉=34,𝐹₁₀=55,
+													n= 0,   1,   2,  3,   4,    5,   6,    7,    8,    9,    10,
+													a𝑛= 0,	1,   1,  2,   3,    5,   8,    13,   21,   34,   55
+
+													1. the recurrence is a𝑛​=a𝑛-₁+a𝑛-₂ with starting values a₀=0, a₁=1,
+													2. use the rule a₂=a₁+a₀
+													Find a₀ a₂=a₁+a₀
+													Find a₁ a₂=a₁+a₀, 
+													Find a₂ a₂​=a₁+0=1, 
+													Find a₃ a₂​+a₁=1+1, 
+													Find a₄ a₃+a₂=2+1, 
+													Find a₅ a₄+a₃=3+2, 
+													Find a₆ a₅​+a₄​=5+3, 
+													Find a₇ a₆+a₅​=8+5, 
+													Find a₈ a₇+a₆=13+8, 
+													Find a₉ a₈+a₇=21+13, 
+													Find a₁₀ a₉​+a₈​=34+21
+	​
+													3. next,
+														assuming the sequence has form which ours does
+																				0,1,1,2,3,5,8,13,21,34,55<----recurrence form
+																			4. next a𝑛​=a𝑛-₁​+a𝑛−₂​
+																			5. next the reccurence leads to a𝑛=rⁿ,
+																			   whose roots are ⏀=1+√5/2, ψ=1+√5/2
+
+																			6. General soltion: a𝑛=Ar₁ⁿ+Br₂​ⁿ<----A, B here are the constants 
+																			   using the initial conditions gives 
+																			   Binets Formula: a𝑛=⏀ⁿ-ψⁿ/√5<----closed form
+																			        r₁=1+√5/2≈1.618033988749895, r₂​=1-√5/2≈1.618033988749895
+																				A=1/√5≈0.447213595499958, B=-1/√5≈0.447213595499958<----this is just the decimal for 1,
+																											or negative 1 over square root 5
+																											(same as A(just A is positive),
+																				a𝑛​=0.447213595499958(1.618033988749895)ⁿ−0.447213595499958(−0.618033988749895)ⁿ<----binets formula in decimal form
+																			
+																			7. (using no. 4) our closed form becomes
+																			
+																			our ex: a₁₀=⏀¹°-ψ¹°/√5=55
+
+NOTES:
+	1. A closed form is a formula that lets you compute the n-th term directly from n, without calculating all the previous terms.
