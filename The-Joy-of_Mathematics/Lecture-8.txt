@@ -1,0 +1,72 @@
+// Lecture 8 JOM //
+
+
+//
+The Joy of Algebra Made Visual:
+				Lets review the laws of exponents, xᵃxᵇ= xᵃ⁺ᵇ, this is true becuase x²x³=x²⁺³=x⁵ 
+				if we look at x², xx, and x³ is xxx so we mulitply (xx)xxx=5x or xxxxx. We also 
+				want the law of exponents to be true when the exponent is 0, so xᵃx⁰ should equal
+				xᵃ⁺⁰ is a which means that xᵃx⁰=xᵃ if we want the laws of exponents to work, then 
+				x⁰ must be 1 so that xᵃx⁰ is still xᵃ thats the reason x⁰=1.
+
+				A typical polynomial degree ₙ looks like axⁿ+bxⁿ+cxⁿ+..., in a,b,c,... are all
+				coefficients can be any real numbers. integers fractions, the only requirement
+				is that if the equation is of degree of ₙ, that is linear equations so plotting
+				points on the Cartesian plane(discovered by Rene Descartes) such as y=2x or (3,6),
+				the result is a line that goes through all of the points called a linear equation.
+
+				A parallel line on a graph is called graph of the function ex: y=2x+3.
+
+				Now, if we graduate from the first degree to the second degree, we have ourselves 
+				here a quadric equation for y=x², which looks like a parabola NOTE: if we change
+				this to y=2x² this shape just increases, or if we use y=(x-2)² this would shift
+				the parabola to the right.
+
+				Now, lets look at the third-degree equations. Looking at the graphs for 
+				y=x², y=x³+4x²+4x, and y=x³-7x+6. The general rule for this is called 
+				fundamental theorem of alegbra, proved by Gauss. According to this theorem,
+				the graph of a polynmial of degree ₙ will intersect the x-axis at most ₙ times.
+				we saw for the quadric equations, n=2, and for the cubic equations n=3.
+//				
+				Lets look at negative exponents: rule: xˉⁿ=1/xⁿ,
+					Ex:	10ˉ² equals 1/10²=1/100
+
+				now lets look at a double negative: 10ˉ²ˉ² equals 
+									(work inside the exponent) -2ˉ² equals 1/2²=1/4
+									(becuase the signs its actually negative), so, 10ˉ²ˉ²=10^-1/4,
+									Apply the negative exponent rule again and Final answer: 1/10^1/4,
+
+
+				Fractional Exponents:
+									So Lets think about square roots for a moment here and we will explore
+									square root, cube root, fourth root, and fifth root, 
+
+									x¹ ²<----so 1 is our top number, and 2 is our bottom number 
+									Ex:
+										2²=4 or √4=2 known as square root,
+										2³=8 or 3√8=2 known as cube root,
+										2⁴=16 or 4√16=2 known as fourth root,
+										2⁵=32or 5√32=2 known as fifth root,
+
+									Ex:
+										3²=9 or √9=3 square root,
+										3³=27 or 3√27=3 cube root,
+										3⁴=81 or 4√81=3 fourth root,
+										3⁵=243 or 5√243=3 fifth root, <----notice we have our normal square roots and then
+													the inversion which equals the original square root.
+
+									Ex:
+
+									A.	1. start wiith x,
+										2. take the square root: 	√x=x^1/2,
+										3. take the cube root of that result: 3√x^1/2,
+										4. using exponent rules: (x^1/2)^1/3=x^(1/2)(1/3)=x^1/6
+										5. so, 3√√x=x^1/6<----this is called Square Root, then Cube Root									//
+
+									B.	1. start with x,
+										2. take the cube root: 3√x=x^1/3,
+										3. take the square root: √x^1/3,
+										4. using exponent rules: (x^1/3)^1/2=x^(1/3)(1/2)=x^1/6
+										5. so, √3√x=x^1/6<----this is called Cube Root, then Square Root										
+NOTES:
+	0^-1 is forever undefined.
