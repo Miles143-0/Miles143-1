@@ -1,0 +1,53 @@
+// Lecture 10 JOM // 
+
+
+//
+The Joy of Proofs:
+			Completed proofs end with a filled or empty box sometimes known as Halmos symbol(■​), or (□); or with QED((quod erat demonstrandum) also translated 
+			as quite easily done or ☺︎). Lets imagine an easy example an even number plus an even number always equals an even number, we say that integer a is 
+			an even number if a=2b, where b is any integer, a is an integer, b is an integer, therefore their sum is an integer ex: x+y=2a+2b or 2(a+b). We will
+			graduate to rational numbers now, if you were to look at a number line, you might believe , as some of the ancient Greeks once did, that all numbers 
+			are rational, that is, that every number out there is equal to some fraction. Pythagoras himself believed that and wouldve been surprised to learn 
+			that one the numbers derivable from his own theorem was not a rational number. According to Pathagorean theorem, for any right triangle with side 
+			lengths a and b hypotenuse c, a²b²=c², 
+								so, using the simplest of right angles 1, 1 which is a=1, b=1,
+								Step 2: we apply Pathagoras  a²b²=c², so, we substitute 1²+1²=c²
+															 1+1=c²
+															  2=c²,
+							      	So, the hypotenuse of a right triangle with legs 1 and 1 is c=√2,
+								We can approximate with decimal expansion √2=1.414213 but we cannot
+								write √2 as a fraction. 
+
+			Existence Theorem: At least one object with a certain property actually exists. ∃x such that P(x),
+						An existence theorem does not always give a formula or method to construct the object. This is similar to saying there is at
+						least one seat in the stadium that is empty.<----your not pointing to it, your only claiming such a seat exist.
+						Ex: There exist an integer that is even.
+							Take 2, 2=2⋅1, so it is even, so ∃n∈ℤ such that n is even<-----in this logic notation/compact mathematical language,
+							
+							∃n∈Z such that n is even
+							∃=there exist<-----it's called the existential quantifier,
+							∃n=there exists an n,
+							n is an integer, ℤ is the set of all integers: ..,-2,-1,0,0,1,2,3,..											
+							so n∈ℤ = n belongs to the integers.
+							'such that' is a bridge meaning "with the condition that"																		//
+							
+				Rational Numbers:
+						Are that the number can be written as a fraction of two integers, with the denominator not equal to zero(can be written as a fraction).
+						Ex:	0.5 or 1/2, 0.75 or 3.4, 0.333.. or 1/3
+				Irrational Numbers:
+						Are that of which that the number in decimal form cannot be written as a fraction of two integers(cannot be written as a fraction).
+						Ex:	√2 or 1.41421356.., √3 or 1.73205080.., π or 3.14159265.., e or 2.71828182
+
+				Direct Proof:			You start with what you know and logically work to the conclusion.
+				Proof by Contradiction:		Assume the statement is false and show that this leads to an impossibility.
+				Proof by Induction:		Used when a statement is claimed to be true for all positive integers.
+				Proof by Cases:			Split the problem into several possibilities.
+				Proof by Counterexample:	To disprove a statement, find one example where it fails.
+
+				Trominoes:	A tromino is a shape made from 3 equal squares joined edge-to-edge. 3 squares in an 'L' shape 
+
+			
+
+NOTES:
+	Symbols are logic notation/compact mathematical language.
+	Symbol manipulation is one of the core activities in mathematics; It means treating mathematical expressions according to formal rules to transform them into equivalent forms.	//
