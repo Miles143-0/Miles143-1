@@ -1,0 +1,57 @@
+// Lecture 11 The Joy of Geometry JOM //
+
+
+
+Geometry means geometria from the Greek, meaning "to measure the earth"--geo for "earth" and metria for "measurement". In this lecture we will learn how to measure
+lengths, angles, and areas. 
+
+				We begin by defining our terms and looking at basic geometric objects.
+
+					A point is an infinitely small dot,
+					A line is an infinite one-dimensional object and is named by naming two points that lie on the line A̅B̅(<----// NOTE: U+0305, also equivalent to A'B').
+					A ray is like a line one endpoint and proceeds out infinitely from that point in only one direction. It is named by giving the endpoint one other point on the ray. A→B, AB→, 
+					A line segment is the portion of a line between two points. A and B,
+					An angle results when two rays share the same endpoint. It is named by one point on one ray, the endpoint, and a point on the other ray.  ∠ABC or ∠CBA,
+					Two lines are parallel line (||) if they never intersect.
+					Two lines are perpendicular lines (⊥) if their intersection results in four equal, or right, angles. A̅B̅ ⊥ C̅D̅,
+					All of geometry is built from points and lines and comes from five axioms of Euclidean geometry.
+					A straight line segment can be drawn joining any two points.
+					Any line segment can be extended indefinitely.
+					Given any line segment, a circle can be drawn with that segment as the radius and one endpoint as the center.
+					All right angles are congruent and measure 90°.
+
+				Given a line and a point that is not on the line, there is exactly one line through the point that is parallel to the original line. This is equivilent to the axiom that the sum of
+				the angles in any triangle is always equal to 90°.
+//
+
+					Set 1: Basic angle types
+					 	 30° — Acute angle,
+					 	 90° — Right angle,
+						120° — Obtuse angle,
+						180° — Straight angle
+
+					Set 2: More varied examples
+						 15°,
+						 45°,
+						 75°,
+						135°,
+						170°
+
+					Set 3: Supplementary angle pairs
+						20° and 160°
+						35° and 145°
+						60° and 120°
+						75° and 105°
+
+					Set 4: Triangle examples
+						30°, 60°, 90°
+						45°, 45°, 90°
+						50°, 60°, 70°
+						80°, 40°, 60°
+
+				Lets prove the vertical angle theorem: suppose AB and CD are lines thats intersect at point O. Then ∠AOC = ∠BOD. In other words we measure the angle AOC equals the measure of angle BOD.
+				(Some authors write this as // m ∠AOC = m ∠BOD.) We know that the measurement of the line AB is 180°. Thats means that ∠AOC = ∠COB must sum to 180°. Those two angles are called supplementary
+				angles becasue they add up to 180°. Similarly, if we look at the line COD, we see that ∠COB + ∠BOD, becasue they form a stright line, also sum 180°. We can now subtract these algebriac equalities
+				to get:  ∠AOC - ∠BOD=180 -180=0, in other words, ∠AOC = ∠BOD.
+
+					
