@@ -1,0 +1,159 @@
+// Lecture 11 The Joy of Geometry JOM //
+
+
+
+Geometry means geometria from the Greek, meaning "to measure the earth"--geo for "earth" and metria for "measurement". In this lecture we will learn how to measure
+lengths, angles, and areas. 
+
+				We begin by defining our terms and looking at basic geometric objects.
+
+					A point is an infinitely small dot,
+					A line is an infinite one-dimensional object and is named by naming two points that lie on the line A̅B̅(<----// NOTE: U+0305, also equivalent to A'B').
+					A ray is like a line one endpoint and proceeds out infinitely from that point in only one direction. It is named by giving the endpoint one other point on the ray. A→B, AB→, 
+					A line segment is the portion of a line between two points. A and B,
+					An angle results when two rays share the same endpoint. It is named by one point on one ray, the endpoint, and a point on the other ray.  ∠ABC or ∠CBA,
+					Two lines are parallel line (||) if they never intersect.
+					Two lines are perpendicular lines (⊥) if their intersection results in four equal, or right, angles. A̅B̅ ⊥ C̅D̅,
+					All of geometry is built from points and lines and comes from five axioms of Euclidean geometry.
+					A straight line segment can be drawn joining any two points.
+					Any line segment can be extended indefinitely.
+					Given any line segment, a circle can be drawn with that segment as the radius and one endpoint as the center.
+					All right angles are congruent and measure 90°.
+
+				Given a line and a point that is not on the line, there is exactly one line through the point that is parallel to the original line. This is equivilent to the axiom that the sum of
+				the angles in any triangle is always equal to 90°.
+//
+
+					Set 1: Basic angle types
+					 	 30° — Acute angle,
+					 	 90° — Right angle,
+						120° — Obtuse angle,
+						180° — Straight angle
+
+					Set 2: More varied examples
+						 15°,
+						 45°,
+						 75°,
+						135°,
+						170°
+
+					Set 3: Supplementary angle pairs
+						20° and 160°
+						35° and 145°
+						60° and 120°
+						75° and 105°
+
+					Set 4: Triangle examples
+						30°, 60°, 90°
+						45°, 45°, 90°
+						50°, 60°, 70°
+						80°, 40°, 60°
+
+				Vertical Angle Theorem: Suppose AB and CD are lines thats intersect at point O. Then ∠AOC = ∠BOD. In other words we measure the angle AOC equals the measure of angle BOD.
+				(Some authors write this as // m ∠AOC = m ∠BOD.) We know that the measurement of the line AB is 180°. Thats means that ∠AOC = ∠COB must sum to 180°. Those two angles are called supplementary
+				angles becasue they add up to 180°. Similarly, if we look at the line COD, we see that ∠COB + ∠BOD, becasue they form a stright line, also sum 180°. We can now subtract these algebriac equalities
+				to get:  ∠AOC - ∠BOD=180 -180=0, in other words, ∠AOC = ∠BOD.
+
+				Corresponding Angles: Suppose you have two shapes and they are separated by two parallel lines with another line crossing them(called a transversal), corresponding angles are angles that are in the 
+				same position when a line crosses two parallel lines.
+
+					Ex:	        Corresponding Angles
+
+							Line 1
+							──────────────────────────────────
+      							1	/      2
+            							/
+           							/
+      							3	/       4
+							──────────────────────────────────
+           							/
+          							/
+         							/
+							──────────────────────────────────
+      							5	/        6
+        							/
+       								/
+      							7	/         8
+							──────────────────────────────────
+							Line 2
+
+							Corresponding angle pairs:
+							∠1 = ∠5
+							∠2 = ∠6
+							∠3 = ∠7
+							∠4 = ∠8
+				
+				NOTE:	 in mathematics we usually use b=base, h=height
+
+							3 sides → Triangle 180° 1/2(b+h)
+							4 sides → Quadrilateral (4-gon(a polygon)) 360°
+							5 sides → Pentagon 540°
+							6 sides → Hexagon 720°
+							7 sides → Heptagon 900°
+							8 sides → Octagon 1080°
+					
+							Common types of quadrilaterals include:
+								• Square – Four equal sides and four right angles (90°).
+								• Rectangle – Opposite sides are equal and all angles are 90°.
+								• Parallelogram – Opposite sides are parallel and equal.
+								• Rhombus – Four equal sides with opposite angles equal.
+								• Trapezoid (Trapezium in some countries) – One pair of parallel sides.
+								• Kite – Two pairs of adjacent equal sides.
+
+							Perimeter is the distance around the outside of a shape. To find the perimeter, you add the lengths of all the sides together.
+							NOTE:	Perimeter = the distance around a shape (the outside edge). <-----perimeter is the sum of lengths of its sides.
+
+							NOTE:	Perimeter = around the outside
+								Area = space inside the shape	<-----typically usedin geometry, 
+
+				Pythagorean Theorem:	The Pythagorean Theorem explains the relationship between the sides of a right triangle. a²+b²=c²,
+							To be a right triangle: the longest side (c) must be exactly the square root of the two shorter sides squared and added together.
+							NOTE: The hypotenuse is the length of the side  that is opposite the right angle. 
+
+							Ex: Lets suppose we have two points and we want to determine the length of a line segment between the points (10,2) and (11,4).
+
+								1. Identify the points A=(10,2), B=(11,4)
+								2. Find the horizontal distance (Δx), Δx=11-10
+													Δx=1<-----so the triangle is 1 unit wide.
+								3. Find the vertical distance (Δy), Δy=4-2
+													Δy=2<-----so the triangle is 2 units tall.
+								4. Now we have a right triangle: one leg=1,
+												 other leg=2
+								5. Apply the Pythagorean Theorem: a²+b²+c², 1²+2²=c²
+													     1+4=c²
+													      5=c²
+								6.Take the square root c=√5, c=√5≈2.236067977<-----the length/distance of a line segment between the points (10,2) and (11,4).
+								NOTE: while doing the mathematics for this equation we also used this to find the connection point between these two points which is (11,2)
+
+							
+
+							Ex: Lets suppose we have three points abd we want to determine the length of a line segment between the points (12,0), (15,1), (20,0).
+
+								1. Identify the first two points A=(12,0), B=(15,1)
+								2. Find the horizontal distance (Δx), Δx=15-12
+													Δx=3<-----so the triangle is 1 unit wide.
+								3. Find the vertical distance (Δy), Δy=1-0
+													Δy=1<-----so the triangle is 2 units tall.
+								4. Now we have a right triangle: one leg=3,
+												 other leg=1
+								5. Apply the Pythagorean Theorem: a²+b²+c², 3²+1²=c²
+													     9+1=c²
+													      10=c²
+								6.Take the square root c=√10, c=√10≈3.162
+								7. Lets move to the next two points now which are (15,1), and (20,0)
+								7.1 Identify the second two points B=(15,1), C=(20,0)
+								8. Find the horizontal distance: (Δx), Δx=20−15
+													Δx=5
+								9. Find the vertical distance: (Δy), Δy=1−0
+													Δy=1<-----NOTE: Whether you travel up or down doesn't change the size of the triangle
+								10. Apply the Pythagorean Theorem: 5²+1²=c²
+												    25+1=c²
+												     26=c²
+								11. Take the square root c=√26, c=√26≈5.099
+								12. Add the two line segments together √10+√26 so, 3.162+5.099=8.261
+
+																	NOTES: 	//	Round to the nearest integer: 8.261 → 8
+																			round up (ceiling): 8.261 → 9
+																			round down (floor): 8.261 → 8	//
+							
+					
