@@ -1,0 +1,64 @@
+// Lecture 11 Two Principals-Pigeonholes and Parity //
+
+
+
+A Pigeonhole states:	If more n objects are placed into n boxes, then at least one box must contain two or more objects. Ex: Suppose there are 13 people in a room
+			but only 12 months in a year. Since birthdays can only occur in only 12 months, at least two people must have birthdays in the same month. 
+
+			Scope:	The pigeonhole principal says that if n+1 objects are placed into n containers, then there must exist a container with at least 2 objects.
+				The parity principal allows us to figure out many mathematical conundrums by simply keeping track of odd and even numbers. These can be used
+				to prove that certain mathematical constructions are impossible. Parity can be used to provide an effient means of error detection for transmitted
+				binary.
+
+			I.	A.	Ex:	Lets say you choose 5 cards from a deck, then since there are only 4 different suits, 2 of those cards must be of the same suit.
+				B.	The generalized pigeonhole principal says that pn+1 or more objects are placed into n boxes, then some box has at least p+1 objects.
+					1. Proof by contradiction: Suppose that each box has at most p objects. Then the total number of objects would be at most pn, contradicting our assumption.
+					2. Ex: Suppose we choose 5 cards from a deck, and there are only 4 suits. In this example at least 1 group has at least 2 cards. Which is ceil(5/4) = 2 or |5,4|=2.
+
+////					Ex:	let cards = 5;
+						let suits = 4;
+
+						let minimum = Math.ceil(cards / suits);
+						console.log(minimum); // 2
+
+					Ex-2:	let characters = 10;
+						let groups = 2;
+
+						let minimum = Math.ceil(characters / groups);
+						console.log(minimum); // 5																													 //
+				C.	Claim If 5 points are chosen inside a 2x2 square, then there must be 2 points within √2 of each other. (skip to II) ////
+			II.	A.	Claim there are 2 powers if 3 whose difference is divisible by 2009.
+					1. Proof: Consider the 2010 numbers 3¹,3²,3³,..3²°¹°,
+					2, 3. Divide each number by 2009, and look at the remainder,
+					3. Since there are only 2009 remainders (0-2008), 2 of them must have the same remainder r,
+					4. Thus for some exponents x and y(where we assume that x is greater than y) 3ˣ=2009q₁+r, and 3ʸ=2009q₂+r,
+					5. Subtracting yields 3ˣ−3ʸ=(2009q₁​+r)−(2009q₂​+r)=2009(q₁​−q₂),
+					6. Thus 2009 divides 3ˣ−3ʸ,
+					7. The proof doesnt tell us how to find x and , but it proves that they must exist.
+
+				B.	Claim: There is a positive power of 3 that ends in 001(Last three digits).
+					
+					1.	A.  3,  3¹,  3²,  3³,  3⁴,  3⁵,  3⁶,  3⁷,   3⁸,   3⁹,...3⁹⁹⁹
+						B.      3,   9,   27,  81,  243, 729, 2187, 6561, 19683,...<----when dividing by 1000(some whole thousands)
+						C.      003, 009, 027, 081, 243, 729, 187,  561,  683,...
+						D.	
+
+						2. in order to find three digits, the number your dividing against must be 3 digits so 1000 is perfect, you obviously cannot use NOTE: // "1", or "10"(<----there just isnt enough digits), you wouldn't use "100" because the numbers would be so large,  //
+						3. We are only going to look at the numbers since they are still large numbers by there last three digits, so looking at No. 1 each power gives us one of the possible endings, because when you divide each power by 1000(Mod 10 → only gives the last digit, 
+																																		Mod 100 → gives the last two digits,
+																																		Mod 1000 → gives the last three digits.) the remainder tells you the last three digits 
+																													
+																																						ex: 27÷1000 has a remainder of 27, so   27≡027(mod1000)																																	       5001÷1000
+																																						       			5001≡1(mod1000)<----has a remainder of 1.
+
+			III.	A.	The parity principle is the idea that every integer is either even or odd, and that this "evenness" or "oddness" (its parity) follows simple rules under arithmetic.
+
+					IMPORTANT NOTE:	when dividing by 1000, our answer will be three digits; these three digits are the leftovers, as the numbers will not evenly divide. // NOTE: Its not like 1000÷1000 which is evenly 1. Most numbers will have a leftover. Just as is if we were dividing by 10.0, 12÷10=1 with remainder of 2 //
+				B.	Definition: If n is a multiple of 2(that is, n is of the form 2q), then the parity of n is even. Otherwise(n is of the form 2q+1), the parity of n is odd.
+				C.	Ex: is it possible to fill in the blanks with "+" or "-" signs to create a total of 20? 1_2_3_4_5_6_7_8_9_0=45
+						1. No since we have 5 odd numbers, the final total must be odd.
+						2. In example C you notice the numerical string equals 45, that is our parity.
+						3. Ex: 1_2_3_4_5_6_7_8_9_0 if we added addition or subtraction signs to equal a value of 10, our string would look like: 123-45-67+8-9+0=10.
+						4. Lets say we we have a Code Word ex: 1(apple)_2(banana)_3(peach)_4(pear)_5(plum)_6(kiwi)_7(strawberry)_8(blueberry)_9(grapes)_0(orange) that consists of 0's and 1's the parity check method checks the parity to match the value.
+
+						
