@@ -1,0 +1,33 @@
+// Lecture 12 JOM //
+Johann Heinrich Lambert(1761)
+
+
+//
+The Joy of Pi:	A=πr², π is defined as the ratio of a circle's circumference to it's diameter, the ratio is the same for every circle regardless
+		of it's size. A=πr²:area of a circle. π, properties: π is irrational, its decimal never terminates or repeats, it is also transcendental,
+		it is not the solution of any polynomial equation with integer coefficients. March 14, is Pi day, people are so enthusiastic of Pi, often 
+		with tongue in cheek. 
+		
+		π=π, r=radius, d=diameter	<-----r=radius, distance from teh center of the circle to its edge
+		Circumference:	C=2πr=πd	<-----the distance around the outside of a circle.
+		Diameter:	d=2r		<-----diameter is twice the radius
+		Area of a Circle:	A=πr².	<-----the amount of space inside the circle
+
+		Now knowing the area of a circle is pi, we can continue on to prove this theory. So we start by imagining we have a circlein front of us
+		and we cut through the top of the circle until we hit the radius. We then peel the circle away like an onion.  First we unwrap the first
+		layer of the circle and lay it down flat; that layer then has a length of 2πr. Then you peel off the next layer has a little bit less than
+		2πr, you continue to peel layers off until we cant any longer. Once we hit the center point at r, we hava a triangle. We know that the area
+		of a triangle is 1/2bh. The base of the triangle has length 2πr, the height of triangle is r, thus the area of the triangle is (1/2)(2πr)(r),
+		which is πr².
+
+		Johann Heinrich Lambert proved that attempts to find pi exactly are futile. Pi is irrational, which means that it cannot be written as a fraction
+		and its decimal expansion will never repeat.
+
+		Lets look at an ellipse which its equation is x²|a²+y²|b². The area of an ellipse is πab.<-----NOTE
+		Lets look at a cylinder which its equation is πr²h (h=height).
+		Lets look at a right circular cone which its equation is (πr²h)/3 (an upside down ice cream cone).
+
+		Lets talk about Phi for a moment, The Golden Ratio φ, a famous irrational number. Phi is equal to 1.618.
+
+		Edgar Allen Poe's Peom: "The Raven" written by Mike Keith. The number of letters in each word equates to the digits of pi. 
+			
