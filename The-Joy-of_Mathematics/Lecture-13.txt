@@ -1,0 +1,48 @@
+// Lecture 13 JOM //
+
+
+
+The Joy of Trigononmetry:
+				Quick note before we begin:	Sine (sin) connects an angle to the ratio of the opposite side and the hypotenuse.
+								Cosine (cos) connects an angle to the ratio of the adjacent side and the hypotenuse.
+								Tangent (tan) connects an angle to the ratio of the opposite side and the adjacent side.
+
+				Trigonometry allows us to calculate areas and measurements often pertaining to triangles that would not be so easily done
+				just using the standard techniques of geometry. Trigonometry comes from the Greek trigonometria, the measurement of triangles.
+				Trigonometry allows us to calculate triangles using two important functions known as the sine function and cosine function.
+				
+				We begin with a right triangle with one angle labeled a. The opposite side is called the opposite side. The other side adjacent
+				to a that isnt the hypotenuse is called the adjacent side. sine=opposite/hypotenuse(or abbreviated as "sin a")
+				The cosine of a (abbreviated as "cos a") is defined as the length of the adjacent side divided by the length of the hypotenuse.
+				cosine=adjacent/hypotenuse
+				The third most common trigonometric function is the tangent function, which is the sine divided by the cosine. Because the sine
+				is opposite/hypotenuse and cosine is adjacent/hypotenuse, the tagent of a(abbreviated as "tan a") is their quotient: tangent=opposite/adjacent.
+
+				Function	Formula			Memory Trick
+				Sine		opposite ÷ hypotenuse	SOH
+				Cosine		adjacent ÷ hypotenuse	CAH
+				Tangent		opposite ÷ adjacent	TOA
+
+				Function	Reciprocal of function	Relationship
+				secant		cosine			sec=1/cos
+				cosecent	sine			csc=1/sin
+				cotangent	tangent			cot=1/tan
+
+				1. Lets look at a classic right angle with side lengths 3, 4, and (hypotenuse length) 5. The hypotenuse is always the longest side and is opposite the
+				90° angle. The triangle works because the Pythogorean Theorem which it's formula is a²+b²=c²,
+				lets substitute the values we have now: 3²+4²=5²
+									9+16=25
+									25=25<----the triangle is valid
+				2. Apply SOH-CAH-TOA
+					1. sin(a)=0.6<----SOH
+					2. cos(a)=0.8<----CAH
+					3. tan(a)=0.75<----TOA
+				
+				
+
+					Ex:	Applying SOH, CAH, TOA to shapes. Lets being with the unit circle, which has a radius of 1. The unit circle has the equation x²+y²=1, we draw an angle of measure a on a unit circle. Lets label the point that
+						cooresponds to angle a as (x,y). If we drop a line from (x,y) to the x-axis, we create a right triangle, the legnth being x and the height is y.
+
+						
+					
+  
