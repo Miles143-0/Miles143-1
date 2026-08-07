@@ -1,0 +1,60 @@
+// Lecture 13 //
+
+
+≡
+Enormous Exponents and Card Shuffling: 		
+
+					I.	The Chinese remainder theorem shows that every number between 1 and m₁m₂, where m₁ and m₂ are relatively 
+						prime, which creates a distinct fingerprint when viewed mod m₁ and mod m₂.
+						Ex:
+							let x = 2;
+							console.log(x % 10);
+						Ex:
+							(10,2) means N≡2(mod 10), and 
+							(11,4) means N≡4(mod 11)
+								the actual goal is to find a single number that has both remainders, keep in mind that you'd
+								be using different modular powers, and viewing their values to find the value that fits both 
+								sets of numbers remainders. They call the Chinese Theorem remainder a fingerprint.
+						 A solution to the system of congruences can be given by the max and may formula: N=m₁a₂x≡m₂a₁y, also referred 
+						as constructive proof.
+							Ex:	Books use different letters, so this could be confusing but we'll use our example numbers in this
+								example.
+								
+								N​≡2(mod10),
+								N≡4(mod11)​
+								m₁=10 a₁=2 m₂=11 a₂=4 m=modulus a=remainder
+
+								now lets use the max and may formula: N=m₁a₂x≡m₂a₁y
+
+								Ex:
+									m₁x≡1(mod m₂​),
+									and
+									m₂​y≡1(mod m₁​)<----these are modular inverses
+
+									to find x:		as we take steps down the math will be shown:
+										10x≡1(mod 11)
+										10≡−1(mod 11)<----minus x both sides
+										−x≡1(mod 11)<----no we have.
+										 x≡10(mod 11)<-----result
+										 x=10
+
+									to find y:
+										11y≡1(mod 10)
+										11≡1(mod 10)
+										 y=1
+
+									
+									Now, the CRT construction is: 
+													N=a₁​m₂y+a₂m₁x<-----the actual max and may mathematics
+													N=(2)(11)(1)+(4)(10)(10)<-----substitute our numbers here.
+													        N=22+400
+														N=422
+													Now reduce modulo:
+															10⋅11=110
+															422≡92(mod110)
+															N≡92 (mod 110)
+
+							
+					II.	Seed planting=raising big numbers to big powers.
+					III.	Casting out 9's to check our answer to big arithmetic problems(seed planting).
+										
