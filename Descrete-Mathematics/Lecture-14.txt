@@ -1,0 +1,18 @@
+// Lecture 14 //
+Pierre de Fermat(1601-1655) 
+
+
+Fermat's "Little" Theorem and Prime Testing:	Fermats Little Theorem is about what happens with the remainders of powers when we work modulo
+						a prime number. //	aᵖˉ¹≡1 (mod p)	original ex number (10,2)
+									Ex:	1. 10-1=9<----use Fermats equation(plug numbers in),
+										2. 2⁹. so 10,2→2⁹
+										3. take 2⁹=2·2·2·2·2·2·2·2·2
+											  =4·4·4·4·2
+											  =16·16·2
+											  =256·2
+											  =512,
+										4. now, lets take 512 and find the remainder by dividing by its
+											original number which is 10. Which is 51.2<--2 being the 
+											remainder, Fermats theory claims if the number is prime 
+											the remainder should be 1. Our ex number fails the test,
+											thus is definitely not prime. //
