@@ -1,0 +1,33 @@
+// Lecture 14 JOM //
+
+
+
+The Joy of the Imaginary Number i:	Commutative and associative law: Commutative Law[The order of numbers can be changed without changing the answer.], Associative Law[The way numbers are grouped does not change the answer.].
+					Complex number: in the form of a+bi a is the real part, b is the imaginary part i is the special number where i²=-1; as a real number is just itself.
+					Ex:	10+2i<----this gives us a location in a two-dimensional number plane
+					A. Addition: (10+2i)+(2+10i)=12+12i
+					B Subtration: (10+2i)−(2+10i)=8−8i
+					C. Multplication: (10+2i)(2+10i)=104i
+					D. Division: (10+2i)/(2+10i)=10+2i
+
+						NOTE: Why do we only change the +? Because the conjugate is specifically about reversing the imaginary direction
+
+//					Conjugate of the first quantity: conjugate = change the sign of i, conjugated means to give the different forms of(a verb in an inflected language such as Latin) as they vary according to
+					voice, mood, tense, number, and person. Lets not forget this so lets make a note to remind ourselves, Think of the x-axis and the y-axis, as we've been talking about. For instance the number
+					1+i will have a "real part" of 1, an x-coordinate of 1, and a y-coordinate (called i) of 1. To find 1+i, then, we go to the right 1 and up 1. Think of the y-axis as having the number 0 where
+					the two axes meet. As we go up, we see 1i,2i,3i,..,and as we go up down the imaginary axis, or y-axis, we see -i, -2i, -3i,.. 
+					Ex:	original: 10 + 2i
+						conjugate: 10 - 2i	//
+
+					We saw reall numbers exist on the real line, but complex numbers exist on whats called the complex plane. Think of the x-axis and the y-axis as weve been using in geometry. For instance the
+					1+i will have a "real part" of 1, an x-coordinate of 1, and a y-coordiante of 1 (called i). To find 1+i, then, we go to the right 1 and up 1. Think of the y-axis as having the number 0 where
+					the two axis meet. As we go up we see // 1i,2i,3i,..//, and as we go down the iaginary axis, or y-axis we -i,-2i,-3i,... 
+
+					Using imaginary number i:	the basic definition is i=√-1, so that means i²=-1, because normal i=√1.
+					
+					Ex usage: √-4,
+						1. Break it apart √-4=√-4√-1
+									since √4=2,
+										and √-1=i
+										you get √-4=2i
+
