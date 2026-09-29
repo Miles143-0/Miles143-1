@@ -1,0 +1,51 @@
+// Lecture 15 JOM //
+Leonard Euler mathamatician
+
+
+The Joy of the Number e: 	Where did the number e come from? The number e was first used by Isaac Newton, but it was really studied and 
+				and analyzed and actually named by the great Swiss mathmatician, Leonard Euler. We start with (1+1/10)¹⁰.
+				The result is 2593,...Next, the Joy of the number // e=2.718281828459045.. // its called Eulers number, after
+				the mathematician Leonhard Euler. The interesting thing about the number e is that e appears naturally whenever
+				something changes continuously.	Ex: 	⨍(χ)=e²
+								its extraordinary property is:	d/dχ(eˣ)=eˣ (in other words, the rate at which eˣ
+				grows is the exactly equal to its current value. Thats almost a mathematical definition of the self-sustaining growth.
+				The number e is typically used is compound interest, for example supposed you start with $1 and recieve 100% interest
+				over one year. If the interest is compounded once: 1(1+1)=2, twice: (1+1/2)²=2.25, (that equation is (1+1/n)ⁿ).
+
+				We have homework assignments as a teacher we do not want to grade the assignments ourselves, how many ways can we return
+				the homework back to the students for grading without any student recieving their own assignments to grade? There are 3!=6
+				ways of returning the the assignments, only 2 of 6 ways result in the students not recieving their own assignment to grade.
+
+				// Ex:	3!=6,
+					Below A gets A, B gets B, C gets C ect.
+					1. A→A, B→B, C→C
+					2. A→A, B→C, C→B
+					3. A→B, B→A, C→C
+					4. A→B, B→C, C→A
+					5. A→C, B→A, C→B
+					6. A→C, B→B, C→A //
+
+				Next, we are going to loo at logarithms , log(512)= log₁₀(512), 10²=100, 10³=1000, log₁₀(512)≈2.70927, because 512 is between 
+				100 and log 1000, or between 2 & 3. For instance we've said that log 10ˣ=x for and x; Another sensible rule is 10ˡᵒᵍ ˣ=x. The
+				most commonly used property of the logarithm is the one that states: The log of produxt is the sum of the 
+				logs: log(xy)=log x + log y. Look at the expression 10ˡᵒᵍ ˣ ⁺ ˡᵒᵍ ʸ. We know , however that 10ˡᵒᵍ ˣ is x and 10ˡᵒᵍ ʸ is y, so
+				thats gives is x·y. Onn the otherhand, we know from our useful log rule that 10ˡᵒᵍ(ˣʸ) is also equal to xy; What we have done here?
+				We have taken 10 to some power and obtained xy; therefore, the two powers must be equal. Equating these powers tells us that log x +
+				log y must equal log xy.
+	
+				As a corollary to that last rule, we an also show what I call the expoenent rule: log(xⁿ)=n log x.
+
+				// Other Logarithms are as follows:	Name:			Notation:	Base:		Example:
+									Common logarithm	log(x)		10		log(1000)=3
+									Natural logarithm 	ln(x)		e≈2.71828	ln(e³)=3
+									Binary logarithm 	log₂(x)		2		log₂(512)=9
+									Base 3			log₃(x)		3		log₃(81)=4
+									Base 5 			log₅(x)		5		log₅(125)=3
+									Base 16			log₁₆(x)	16		log₁₆(256)=2		//
+
+				Ex-2:	suppose we use the numbers (10, 2), so we'll start with
+												//	10²=100 which is log₁₀(100)=2, think of this as Base 10, Exponent = 2, Result = 100. 
+													Common logarithm:log₁₀(2,354,213,380)=9.37175 which is Base 10,
+													Natural logarithm--base e: ln(2,354,213,380)=21.5797,		//
+													Binary logarithm: log₂(2,354,213,380)=31.1326 which is base 2
+												 
