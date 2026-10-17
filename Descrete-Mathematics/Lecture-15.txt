@@ -1,0 +1,110 @@
+// Lecture 15 //
+1. Ronald Rivest 1977 created RSA 
+2. Adi Shamier 1977 created RSA
+3. Leonard Adleman 1977 created RSA
+
+
+
+Open Secrets-Public Key Cryptogrphy:
+					1. Public key cryptography roots from the Greek word "crypto" and "graphon" meaning "hidden writing"
+						A. Suppose we have a secret message that is "quiz today", this message is called plaintext,
+							how can we disguise our message?
+						B. Shifted method: every letter is shifted by the same amount, if the amount of our shift
+							(known as the key) was to shift every letter forward by 2 (mod 26), then "quiz today"
+							would become "swkbvqfca" known as the ciphertext.
+					II. The most famous nethod for public key cryptography is called the RSA method 
+						A. RSA method was named after 3 mathimatically trained coputer scientists, Ronald Rivert, Adi Shamier
+							and Leonard Adleman who discovered this nethod 1977
+						B. Let a, b, and n be enormous numbers(say 2000 digits long). Its very easy for a coputer to calculate
+							aᵇ mod n and gcp(a,b) and to determine if n is a prime number. But if n is composite--say, n = pq,
+							where p and q are 1000-digit primes--then it is very hard for a computer to factor n.
+						C. Here is how RSA works: The bank publishes 2 numbers on a website, n and e(as in "encipher"); n and e
+							are about 2000 digits long.
+							1. plaintext=QuizToday
+						//	2. convert plaintext to a number M(under 2000 digits) by replacing each letter with it's 2-digit 
+								position in the alphabet for example PatrickMichaelMcMahonCorp=160120180903111309030801051212130313011508152015180016 //
+									// First we started with each letter being its numerical position in the alphabet A=1, B=2,ect..
+									P=16,A=01,T=20,R=18,… giving us: 160120180903111309030801051212130313011508152015180016 //
+									C=Mᵉ(mod n), We take the number M and use Patrick's public key C=Mᵉ(mod n),
+
+									The resulting C is the ciphertext — the thing that looks scrambled.
+
+									Then Patrick uses his private key to reverse it: M=Cᵈ(mod n)
+						D.	Public key: (n,e) [encrypt, sign]
+						  RSA:
+							Private key: (n,d) [decrypt, verify]
+
+							Elliptic Curve: uses mathematic properties of elliptic curves over finite fields.
+						  TLS:
+							Diffie-Hellman= used for apps, passwords. Patrick -> Secret <- Issiah
+							Allows two parties to share a secret even though everything else is plaintext.
+
+						  Hybrid Cryptography: Just like TLS, this is also used for symmetric encryption, not to encrypt all the internet traffic.
+
+						  DNS can use DNSSEC= domain name system security extensions uses public-key cryptography & digital signatures and does not
+						  encrypt traffic but DoT and DoH does encrypt traffic.
+						
+						  (PQC): Post Quantum Computing use ML-KEM(key establishment), ML-DSA(signatures), SLH-DSA(signatures).
+
+						  (see top of page 1,2,3) came up with the RSA method 1977 all 3 mathematically trained computer scientists.
+
+						  RSA: Ex:
+							1. Prime Secret numbers p=5, q=2
+							2. calculate n: n=pq=5∙2=10
+								both keys will contain 10.
+							3. calculate φ(n):	φ(n)=(p-1)(q-1)
+										φ(10)=(5-1)(2-1)=4
+							4. choose e: we need  1<e<4 <---find e: our possibilites are: 3
+							5. our public key is(n,e)=(10,3)
+
+							Ex2:
+							 1. pick 2 prime #'s p=5, q=11
+							 2. calculate n: n=p∙q
+									 n=5∙11=55
+									 so, n=55
+							 3. calculate   φ(n)=(p-1)(q-1)
+									φ(55)=(5-1)(11-1)
+									φ(55)=(4)(10)
+									(55)=40, φ=phi so phi=40.
+							4. choose e: 	1<e<40
+								    & 	gcd(e,40)=1
+									lets choose e=3.
+							5. keep in mind: public-key=(n,e) so (55,3)
+									 private-key=(n,d) so (55,27), both sets equal a key pair.
+							6. 	d is the # that satisfies (e∙d) mod φ(n)=1
+								lets put our #'s in (3∙d) mod 40=1
+								we find 3∙27=81
+								&	81 mod 40=1
+								therefore d=27
+							so,	Public key (n,e) p∙q=n , see above for e.
+								Private key (n,d) p∙q=n , see above for d.
+
+							NOTE: d=d₀+kφ(n)<----keep this note, as to find d.
+							
+							// js:basic rsa method in action. with secret derivitive of five and eleven //
+							
+						//	p=5;
+							q=11;
+							n=p*q;
+							f=(p-1)*(q-1);
+							e=3;
+							for(d=1; (e*d)%f!=1;d++);
+							console.log([n,e],[n,d]);	//
+
+						(() => {
+    							const p = 10;
+    							const q = 2;
+    							const n = p * q;
+    							const f = (p - 1) * (q - 1);
+    							const e = 3;
+
+    							let d = 1;
+
+    							while ((e * d) % f !== 1 && d < f) {
+        						d++;
+    							}
+
+							console.log([n, e], [n, d]);
+						})();
+
+
