@@ -1,0 +1,28 @@
+// Lecture 16 JOM //
+
+
+
+The Joy of Infinity:	Infinity is technically not a number, its a concept that somethings larger than any number. Infinity is treated
+			as a number, repersented by the the symbol ∞. For example adding all positive numbers equals infinity. Mathmaticians 
+			would call it, "goes to infinity", meaning it'll be larger than any number you ask for, so larger than a million, a trillion,
+			even a googol. The cousin of infinity, denoted by -∞. Example the sum of all negative numbers get smaller than any number you
+			ask for. As for mathematical convenience, we make statements such as 1/infinity=0, we can even say 1/-∞=0, both equal getting
+			closer to zero. We can never say 1/0=∞, because 1 divided by zero could be infinity or negative infinity.
+	
+			The size of a set is (or Cardinality of a set S(denoted |S|) is the number of elements in the set.
+
+			Continuum Hypothesis: (CH), famous mathematical question about whether there is an infinity strictly between two particular sizes
+			of infinity. 
+			The two ∞'s:	1. the size of the natural numbers: 1,2,3,4,5,..
+					2. c=|ℝ|=2ℵ⁰: the size of the real numbers, including every decimal between 0 and 1. The infinity is strictly larger
+							than ℵ₀. The big question: is there an infinity set whose size is bigger than ℵ₀, but smaller than the
+							continuum? The continuum hypothesis says: 2ℵ₀=ℵ₁.
+							
+						//	NOTE:	const continuum hypothesis=(2n** aleph0)==aleph1; //
+
+		//	Ex: using aleph-null(ℵ₀) with 3174579123.
+				so, N=3174579123, now lets repersent the digits as a set: A={3,1,7,4,5,7,9,1,2,3}. 
+				A set contains each distinct element only once soL A={1,2,3,4,5,7,9}, therefore, |A|=7 
+				sets:	1. distinct digits ℕ=7,
+					2. natural numbers ℕ ℵ₀
+					3, all finit strings of digits ℵ₀ //
