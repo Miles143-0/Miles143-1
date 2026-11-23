@@ -46,8 +46,8 @@ Ways to Walk--Matrices and Markov Chains	Ex-1: Assigning letters to digits:
 																													which is a possible transition rule. 
 																													We have to decide ho likely each transition is. //
 
-							Markov Chains are used for modeling random processes, we address the question "How many ways can you walk from one vertex to another in a given graph?". One way a computer can repersent a graph is by using an adjacentcy matrix, 
-							where the entry in the iᵀᴴ column of the matrix is the number of edges that go from i to j.
+							I.	Markov Chains are used for modeling random processes, we address the question "How many ways can you walk from one vertex to another in a given graph?". One way a computer can repersent a graph is by using an adjacentcy matrix, 
+								where the entry in the iᵀᴴ column of the matrix is the number of edges that go from i to j.
 								1. Ex: starting vertex:	3=(3-3) (3-1) (3-7) <----Group A
 							
 								the adjacent connections are:
@@ -77,7 +77,7 @@ Ways to Walk--Matrices and Markov Chains	Ex-1: Assigning letters to digits:
 																		let B = [4,5,7,9,1,2,3];
 																		end;
 
-																		let edges = [];
+																	//	let edges = [];
 	
 																			for(let start of A) {
 																				for(let end of B) {
@@ -94,6 +94,82 @@ Ways to Walk--Matrices and Markov Chains	Ex-1: Assigning letters to digits:
 																				.map(edge => edge[1]);
 
 																		console.log(start + "->", adjacent);
-																		}
+																		}	
+																		end;	//
 
+							II.	A random walk is a walk with disntinct probabilities for each step.
+									i = the current state(row)	// starting Vertex //
+									j = the next state(column)	// destination Vertex //
+									P = Probability
+									V = Vertex
+									E = Edge, Edges: subset of V.
+									Pᵢⱼ = transition probability
+						// NOTE				if	i = Row 1 vertex 3
+											i = Row 2 vertex 1
+											i = Row 3 vertex 7	//
+						// NOTE			  j  j  j  j  j  j  j  j  j  j
+									i[1  2  3  4  5  6  7  8  9  10]
+									i[11 12 13 14 15 16 17 18 19 20]
+									i[21 22 23 24 25 26 27 28 29 30]	//
+
+									A = i = starting vertex	// example = 3, 1, 7 //
+										B = j = destination vertex	// example = 4,5,7,9,1,2,3 //
+
+										let A=[3,1,7]
+
+										let B=[4,5,7,9,1,2,3]
+
+										let matrix = A.map(i => 
+												B.map(j=>1)
+												);
+
+										console.log(matrix);
+
+										end;
+
+										Previously we built an edge incidence-style repersentation; we will now repersent a Markov transition matrix.
+										NOTE // S=[1,2,3,4,5,7,9] //
 										
+											let states=[1,2,3,4,5,7,9];
+
+											let transitions = {
+												3:[4,5,7,9,1,2,3],
+												1:[4,5,7,9,1,2,3],
+												7:[4,5,7,9,1,2,3]
+												};
+
+											let matrix = states.map(i => {
+												let destinations = transitions[i] || [];
+
+												return states.map(j => {
+													return destinations.filter(x => x === j).length /
+														destinations.length || 0;
+												});
+											});
+
+											console.table(matrix);
+
+										Our first transition equation is P(3ᵢⱼ)=1/7, or also P≈0.1428587, each of the seven destination occurances has an equal chance.
+
+										Now, we will continue and lightly speak of probability dstribution.
+										// Our seven states: S=[1,2,3,4,5,7,9], we will start at vertex 3(NOTE: probability of starting at 3=1(100%), probability of starting at every other vertex=0 //
+										// Our initial probability vector is V₀=[0,0,1,0,0,0,0], 
+												let S = [1,2,3,4,5,7,9];
+
+												let A = [3,1,7];
+
+												let B = [4,5,7,9,1,2,3];
+
+												let connections = {
+													3: B,
+													1: B,
+													7: B
+												};
+
+												let Pij =1 / B.length;
+												
+												let V0 = [0,0,1,0,0,0,0];
+
+												let path = [3,1,7];
+
+												console.log({S, A, B, connections, Pij, V0, path});
