@@ -1,0 +1,28 @@
+// Lecture-18 JOM //
+
+
+
+The Joy of Differencial Calculus:
+					Differencial Calculus is the mathematics of change, it allows us to understand how quickly things change.
+						Suppose 3,1,7,4,5,7,9,1,2,3 // Lets treat each position as an x-coordinate and each digit as a
+						y-value. // 		so,	1. x=1, y=3 Δy=-2
+										2. x=2, y=1 Δy=+6
+										3. x=3, y=7 Δy=-3
+										4. x=4, y=4 Δy=+1
+										5. x=5, y=5 Δy=0
+										6. x=6, y=7 Δy=+2
+										7. x=7, y=9 Δy=+2
+										8. x=8, y=1 Δy=-8
+										9. x=9, y=2 Δy=+1
+										10. x=10 y=3 Δy=+1
+
+										Δy=yₙ₊₁-yₙ, // yn=current value, and yn+1=next value, Δy=the difference between the next and current values.  //
+										
+										//	let n = [3,1,7,4,5,7,9,1,2,3];
+
+											for (let i = 0; i < n.length -1; i++) {
+												console.log(n[i+1]-n[i]);
+												}	//
+											
+
+					// NOTES:	Δ=Delta, which is the symbol for Differential calculus.consider,	f(x)=x²	//
