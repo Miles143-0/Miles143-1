@@ -1,0 +1,98 @@
+// Lecture-18 //
+
+
+
+Social Networks and Stable Marriages:	One of the theories in graph theory is called the handshake theorem, which says that when a group of people
+					meet and some of them shake hands, the total number of handshakes will always be even.
+
+					I.	A.	The handshake theorem says that the sum of the degrees of the vertices of a graph must be twice the number
+						of edges.
+
+					II.	Ramsey Theorem:	suppose we have:	V={3174579123}
+											a=3,
+											b=1,
+											c=7,
+											d=4,
+											e=5,
+											f=7,
+											g=9,
+											h=1,
+											i=2,
+											j=3
+
+											E=n(n-1)/2,
+											E=10(9)/2=45
+
+											Vertex a=3,
+													a={b,c,d,e,f,g,h,i,j}
+											Vertex b=1,
+													b={c,d,e,f,g,h,i,j}
+											Vertex c=7,
+													c={d,e,f,g,h,i,j}
+											Vertex d=4,
+													d={e,f,g,h,i,j}
+											Vertex e=5,
+													e={f,g,h,i,j}
+											Vertex f=7,
+													f={g,h,i,j}
+											Vertex g=9,
+													g={h,i,j}
+											Vertex h=1,
+													h={i,j}
+											Vertex i=2,
+													i={j}
+
+											M₁₀ₓ₁₀ 	// 0=same vertex(no self connection), 1=Red connection, 2=Blue connection. //
+											  a b c d e f g h i j
+											a 0 2 2 1 1 1 1 1 1 2
+											b 2 0 2 1 1 1 1 2 1 2
+											c 2 2 0 1 1 2 1 2 1 2
+											d 1 1 1 0 1 1 1 1 1 1
+											e 1 1 1 1 0 1 1 1 1 1 
+											f 1 1 2 1 1 0 1 1 1 1
+											g 1 1 1 1 1 1 0 1 1 1
+											h 1 2 2 1 1 1 1 0 1 1
+											i 1 1 1 1 1 1 1 1 0 1
+											j 2 2 2 1 1 1 1 1 1 0
+														Mab=ba	//
+												const M = [
+														[0,2,2,1,1,1,1,1,1,2],
+														[2,0,2,1,1,1,1,2,1,2],
+														[2,2,0,1,1,2,1,2,1,2],
+														[1,1,1,0,1,1,1,1,1,1],
+														[1,1,1,1,0,1,1,1,1,1],
+														[1,1,2,1,1,0,1,1,1,1],
+														[1,1,1,1,1,1,0,1,1,1],
+														[1,2,2,1,1,1,1,0,1,1],
+														[1,1,1,1,1,1,1,1,0,1],
+														[2,2,2,1,1,1,1,1,1,0]
+														];
+
+												const vertices = "abcdefghij";
+												
+												let triangles = [];
+
+												for (let a = 0; a < 10; a++) {
+													for (let b = a + 1; b < 10; b++) {
+														for (let c = b + 1; c < 10; c++) {
+														
+														const x = M[a][b];
+														const y = M[a][c];
+														const z = M[b][c];
+
+														if ( x === y && y === z) {
+															triangles.push({
+																vertices:
+																	vertices[a] +
+																	vertices[b] + 
+																	vertices[c],
+																color: x === 1 ? "Red" : "Blue"
+																});
+															}
+														}
+													}
+												}
+												console.log(triangles);
+												console.log("Total:", triangles.length);
+											
+											// NOTE: Our graph has 10 vertices, 45 total edges, 36 red edges, 9 blue edges, 71 monochromatic triangle //
